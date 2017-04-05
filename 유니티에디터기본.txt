@@ -1,0 +1,30 @@
+[MenuItem("CExamTol/Show CExamTool")]
+
+public static void Show()
+{
+ EditorWindow.GetWindow(typeof(CExamTool));
+ EditorApplication.update();
+}
+
+private void OnEnable()
+{
+
+}
+
+private void OnGUI()
+{
+ //가로로 정렬
+ EditorGUILayout.BeginHorizontal() ;		
+
+ //새로로 정렬
+ //아무것도 적지않으면 기본 세로 정렬
+ //EditorGUILayout.BeginVertical();
+ //EditorGUILayout.EndVertical();
+
+ if (true == GUILayout.Button("Test",GUILayout.Width(60),GUILayout.Height(50))) { }
+ if (true == GUILayout.Button("New", GUILayout.Width(60), GUILayout.Height(50))) { }
+ if (true == GUILayout.Button("Load", GUILayout.Width(60), GUILayout.Height(50))) { }
+ if (true == GUILayout.Button("Save", GUILayout.Width(60), GUILayout.Height(50))) { }
+
+ EditorGUILayout.EndHorizontal();
+}
